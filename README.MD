@@ -1,4 +1,8 @@
 # Laravel nova sidebar links
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/gabrieliuga/laravel-nova-sidebar-links.svg?style=flat-square)](https://packagist.org/packages/gabrieliuga/laravel-nova-sidebar-links)
+[![StyleCI](https://github.styleci.io/repos/233714380/shield?branch=master)](https://github.styleci.io/repos/233714380)
+[![Total Downloads](https://img.shields.io/packagist/dt/gabrieliuga/laravel-nova-sidebar-links.svg?style=flat-square)](https://packagist.org/packages/gabrieliuga/laravel-nova-sidebar-links)
+
 Add links to your nova backend
 
 #### Install the package
