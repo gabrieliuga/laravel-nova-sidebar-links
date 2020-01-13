@@ -44,6 +44,7 @@ class NovaSidebar extends Tool
     public function addGroup(SidebarGroup $group): self
     {
         $this->linkGroups->add($group);
+
         return $this;
     }
 
@@ -55,6 +56,7 @@ class NovaSidebar extends Tool
     public function addLink(SidebarLink $link): self
     {
         $this->links->add($link);
+
         return $this;
     }
 }

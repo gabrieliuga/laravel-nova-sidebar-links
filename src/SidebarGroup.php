@@ -2,7 +2,6 @@
 
 namespace Giuga\LaravelNovaSidebar;
 
-
 use Illuminate\Support\Collection;
 
 class SidebarGroup
@@ -23,6 +22,7 @@ class SidebarGroup
     public function setName(string $name): self
     {
         $this->name = $name;
+
         return $this;
     }
 
