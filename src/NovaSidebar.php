@@ -3,7 +3,6 @@
 namespace Giuga\LaravelNovaSidebar;
 
 use Illuminate\Support\Collection;
-use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
 
 class NovaSidebar extends Tool
@@ -38,7 +37,7 @@ class NovaSidebar extends Tool
     }
 
     /**
-     * Add a new sidebar group
+     * Add a new sidebar group.
      * @param SidebarGroup $group
      * @return $this
      */
@@ -49,7 +48,7 @@ class NovaSidebar extends Tool
     }
 
     /**
-     * Add a standalone link to the sidebar
+     * Add a standalone link to the sidebar.
      * @param SidebarLink $link
      * @return $this
      */

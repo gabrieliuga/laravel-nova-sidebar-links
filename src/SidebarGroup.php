@@ -16,7 +16,7 @@ class SidebarGroup
     }
 
     /**
-     * Set the name of the group to be rendered on the Nova sidebar
+     * Set the name of the group to be rendered on the Nova sidebar.
      * @param string $name
      * @return $this
      */
@@ -27,13 +27,14 @@ class SidebarGroup
     }
 
     /**
-     * Add a new link to the collection inside this group
+     * Add a new link to the collection inside this group.
      * @param SidebarLink $link
      * @return $this
      */
     public function addLink(SidebarLink $link): self
     {
         $this->links->add($link);
+
         return $this;
     }
 }

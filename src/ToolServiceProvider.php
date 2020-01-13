@@ -2,11 +2,9 @@
 
 namespace Giuga\LaravelNovaSidebar;
 
-use Laravel\Nova\Nova;
-use Laravel\Nova\Events\ServingNova;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Giuga\LaravelNovaSidebar\Http\Middleware\Authorize;
+use Laravel\Nova\Events\ServingNova;
+use Laravel\Nova\Nova;
 
 class ToolServiceProvider extends ServiceProvider
 {
@@ -17,7 +15,7 @@ class ToolServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'nova-sidebar');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'nova-sidebar');
 
         $this->app->booted(function () {
             $this->routes();
@@ -35,7 +33,6 @@ class ToolServiceProvider extends ServiceProvider
      */
     protected function routes()
     {
-
     }
 
     /**
@@ -45,6 +42,5 @@ class ToolServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
     }
 }
