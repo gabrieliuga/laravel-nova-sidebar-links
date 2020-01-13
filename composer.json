@@ -14,8 +14,16 @@
             "role": "Developer"
         }
     ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ],
     "require": {
-        "php": ">=7.4.0"
+        "php": ">=7.4.0",
+        "laravel/framework": "^6.2",
+        "laravel/nova": "^2.9"
     },
     "autoload": {
         "psr-4": {
