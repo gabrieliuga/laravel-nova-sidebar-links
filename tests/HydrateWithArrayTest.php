@@ -34,6 +34,9 @@ class HydrateWithArrayTest extends TestCase
         $this->assertEquals('Utilities', $novaSidebar->linkGroups->first()->name);
         $this->assertTrue($novaSidebar->links instanceof Collection);
         $this->assertTrue($novaSidebar->links->count() == 1);
+        $this->assertEquals('_blank', $novaSidebar->linkGroups->first()->links->first()->type);
+        $this->assertEquals('Telescope', $novaSidebar->linkGroups->first()->links->first()->name);
+        $this->assertEquals('/telescope', $novaSidebar->linkGroups->first()->links->first()->url);
     }
 
     /** @test */
