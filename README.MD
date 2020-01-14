@@ -58,3 +58,7 @@ public function tools()
     ];
 }
 ```
+
+The result of the above will be:
+
+![Laravel nova menu](https://raw.githubusercontent.com/gabrieliuga/laravel-nova-sidebar-links/master/Screenshot.png)
