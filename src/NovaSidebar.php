@@ -59,4 +59,35 @@ class NovaSidebar extends Tool
 
         return $this;
     }
+
+    /**
+     * Hydrate the menu without creation of classes manually.
+     * @param array $data
+     * @return $this
+     */
+    public function hydrate(array $data): self
+    {
+        if (count($data)) {
+            foreach ($data as $key => $links) {
+                if (is_array($links)) {
+                    $group = new SidebarGroup();
+                    $group->setName($key);
+                    foreach ($links as $link) {
+                        $type = '_blank';
+                        if (count($link) == 3) {
+                            list($name, $url, $type) = $link;
+                        } else {
+                            list($name, $url) = $link;
+                        }
+                        $group->addLink((new SidebarLink())->setName($name)->setUrl($url)->setType($type));
+                    }
+                    $this->addGroup($group);
+                } else {
+                    $this->addLink((new SidebarLink())->setName($key)->setUrl($links));
+                }
+            }
+        }
+
+        return $this;
+    }
 }
