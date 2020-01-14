@@ -2,10 +2,7 @@
 
 namespace Giuga\LaravelNovaSidebar\Tests;
 
-
 use Giuga\LaravelNovaSidebar\NovaSidebar;
-use Giuga\LaravelNovaSidebar\SidebarGroup;
-use Giuga\LaravelNovaSidebar\SidebarLink;
 use Illuminate\Support\Collection;
 use Laravel\Nova\Tool;
 use Orchestra\Testbench\TestCase;
@@ -16,9 +13,9 @@ class HydrateWithArrayTest extends TestCase
         'Utilities' => [
             ['Telescope', '/telescope'],
             ['Horizon', '/horizon'],
-            ['Google', 'https://google.com', '_self']
+            ['Google', 'https://google.com', '_self'],
         ],
-        'Google 2' => 'https://google.com'
+        'Google 2' => 'https://google.com',
     ];
 
     /** @test */

@@ -75,9 +75,9 @@ class NovaSidebar extends Tool
                     foreach ($links as $link) {
                         $type = '_blank';
                         if (count($link) == 3) {
-                            list($name, $url, $type) = $link;
+                            [$name, $url, $type] = $link;
                         } else {
-                            list($name, $url) = $link;
+                            [$name, $url] = $link;
                         }
                         $group->addLink((new SidebarLink())->setName($name)->setUrl($url)->setType($type));
                     }
