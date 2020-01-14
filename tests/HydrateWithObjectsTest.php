@@ -2,7 +2,6 @@
 
 namespace Giuga\LaravelNovaSidebar\Tests;
 
-
 use Giuga\LaravelNovaSidebar\NovaSidebar;
 use Giuga\LaravelNovaSidebar\SidebarGroup;
 use Giuga\LaravelNovaSidebar\SidebarLink;
