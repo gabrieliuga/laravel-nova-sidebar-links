@@ -5,7 +5,7 @@
         "laravel",
         "nova"
     ],
-    "homepage": "https://github.com/spatie/nova-tags-field",
+    "homepage": "https://github.com/gabrieliuga/laravel-nova-sidebar-links",
     "license": "MIT",
     "authors": [
         {
