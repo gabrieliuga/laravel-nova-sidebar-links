@@ -1,0 +1,18 @@
+language: php
+php:
+- 7.4
+env:
+  matrix:
+  - COMPOSER_FLAGS=""
+  global:
+  - secure: WUewymhbMRYA/YqI43xx5ywbDuQk7cFfR7AIh4OO9vl7WSkUmE6uC4UPBrPi5Eyg9KxfSHqNQNRIIPIUn6MHunLIetZaugCm4XZC28opuuwfnkROf3c7jxnYRN4LiUxlaK6J5arMcRSv3sU7220PVdpYzdZJywMavDm4HNidjKakLKU3VDc1mnJ5CkEpg/WEpB1bnSsC7wh55qF5UUwW9n0l+ncgdVfh+hkUo7LVAOyNYnPDIehvw+lfuWKxXQ1Yk5Ovh1B0dZawxCU7Xo1Q59KB1tnOHfARmm86xfnzdZHVyacClfVv3yTJ+EFPd7qAVEDDt17EA3+MBz81cJYPJ9lQYcQWAEciFeyMIXIDpS8NsZ3OR///GOMgwllCfG+ueMtl8VC3teAYIt7pdxcFwMftleOkcFpmZEGzHIIbBBW/MyQcbjnXIOYuCiT/S1qT955aH9zCXHWt3UPFQaTIWy6dM0qAzhmKUtCqErYuQ3SRmyqtUDR6wkR+BW+B1KF6+3UrC0NkVt8E4ZqE8fwPKuiIU6F6awVLSqo0glz3P8aZIC9p9W73yD8gPR7ZRA9ZRAOem8uYUMt/bCfLmcVBXayT9zROyd+sofPAB/0TtB2McwaWUQ86kqVjoQAoQkBxh7uNf/FWNNnzNwe5EwgwBbEoHr+lI0HTecbWVfI6n7k=
+  - secure: sjm6jZVCGcECNxcMCrPwKOBmQQ9jQ85hv/2ehPhd+kj67qKLq6Jl5nlh/CAGlgQ1lSnwcH+jmBFoUGDF2t28d5ZXUxfczx6kupEFtom4jLmUnREeLDB8gpSXb2uJb010v/DUMOR27FBMd6PNtvTJjmmL5UWDEag5FuC/A/NUp2fQ6p2X0RYQ4NS4wiqTkaKN56kSpk65l22vuzXaqjis+h6LhVBYGc9WsnJDMEMeCmelkd26NEI5uHBxf1VOctYlEogRo32k7Or/PSD6gnY0NjpwC3FCQjCQSX+su63zz8g4vy+hYxaqpt3W+g0XbccQQ6LtwyAnR5o6Ec7R3XTv04GJTtFpFjqnperxorBjsUCn+lSZyNJtJLqOiK5Y5kKoi6BvFx4R1vUaU2UAz0Girf9+RqtPcWptY9KdPEgXM4GTYkZ86X4gcEd/Gvrua2YuCw5FkbzJcopfLkGUkYSRCO3RoOkhciIHJwO4bctp5OrxgWKGHyegTT6GOjFat5QWbBZwydhR5Q9o+ujC2o2hJiSdL5dBB0Gaw+Slh/ATyqLvhO/FL+XwY0pfinf7HkLiaALyzyg4202pTA+9Mc1Zsfm1IroAr5c5nw5sEWHo1YKG10mbKNRuBg6GecwgYB9pyB9ai+HcV45O3bjs31ox73adGBG1ONfW7MXriExUX/Y=
+install:
+    - echo "{\"http-basic\":{\"nova.laravel.com\":{\"username\":\"${NOVA_USERNAME}\",\"password\":\"${NOVA_PASSWORD}\"}}}" > auth.json
+before_script:
+- travis_retry composer self-update
+- travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
+script:
+- vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+after_script:
+- php vendor/bin/ocular code-coverage:upload --format=php-clover coverage.clover

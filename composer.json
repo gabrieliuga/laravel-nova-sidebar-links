@@ -1,0 +1,59 @@
+{
+    "name": "gabrieliuga/laravel-nova-sidebar-links",
+    "description": "Allow definition of custom links on Laravel Nova sidebar.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "homepage": "https://github.com/gabrieliuga/laravel-nova-sidebar-links",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gabriel Iuga",
+            "email": "me@iuga.dev",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.0",
+        "laravel/framework": "^6.2",
+        "laravel/nova": "^2.9"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Giuga\\LaravelNovaSidebar\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Giuga\\LaravelNovaSidebar\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Giuga\\LaravelNovaSidebar\\ToolServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
