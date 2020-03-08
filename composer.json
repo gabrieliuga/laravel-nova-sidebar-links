@@ -22,8 +22,8 @@
     ],
     "require": {
         "php": ">=7.4.0",
-        "laravel/framework": "^6.2",
-        "laravel/nova": "^2.9"
+        "laravel/framework": ">=6.2",
+        "laravel/nova": ">=2.9"
     },
     "require-dev": {
         "orchestra/testbench": "^4.0",
