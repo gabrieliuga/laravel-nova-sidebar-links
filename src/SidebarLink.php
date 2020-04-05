@@ -2,8 +2,12 @@
 
 namespace Giuga\LaravelNovaSidebar;
 
+use Giuga\LaravelNovaSidebar\Traits\Makeable;
+
 class SidebarLink
 {
+    use Makeable;
+
     public string $url;
     public string $type = '_blank';
     public string $name;
