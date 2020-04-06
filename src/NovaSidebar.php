@@ -2,11 +2,14 @@
 
 namespace Giuga\LaravelNovaSidebar;
 
+use Giuga\LaravelNovaSidebar\Traits\Makeable;
 use Illuminate\Support\Collection;
 use Laravel\Nova\Tool;
 
 class NovaSidebar extends Tool
 {
+    use Makeable;
+
     public Collection $linkGroups;
     public Collection $links;
 

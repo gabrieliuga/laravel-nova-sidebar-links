@@ -2,10 +2,13 @@
 
 namespace Giuga\LaravelNovaSidebar;
 
+use Giuga\LaravelNovaSidebar\Traits\Makeable;
 use Illuminate\Support\Collection;
 
 class SidebarGroup
 {
+    use Makeable;
+
     public string $name;
     public Collection $links;
 
