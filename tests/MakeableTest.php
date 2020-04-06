@@ -5,13 +5,10 @@ namespace Giuga\LaravelNovaSidebar\Tests;
 use Giuga\LaravelNovaSidebar\NovaSidebar;
 use Giuga\LaravelNovaSidebar\SidebarGroup;
 use Giuga\LaravelNovaSidebar\SidebarLink;
-use Illuminate\Support\Collection;
-use Laravel\Nova\Tool;
 use Orchestra\Testbench\TestCase;
 
 class MakeableTest extends TestCase
 {
-
     /** @test */
     public function testNovaSidebarIsMakeable()
     {
@@ -32,5 +29,4 @@ class MakeableTest extends TestCase
         $sidebarLink = SidebarLink::make();
         $this->assertTrue($sidebarLink instanceof SidebarLink);
     }
-
 }
